@@ -3,7 +3,6 @@ import BalanceCard from "./BalanceCard";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import Divider from "@material-ui/core/Divider";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,13 +32,22 @@ function BalanceCards() {
   return (
     <div className={classes.root}>
       <div className={classes.wid}>
-
-          <Paper className={classes.paper}>
-            <BalanceCard className={classes.nuu} name="AFYA" number="143.00" type="Balance" />
-        <Divider orientation="vertical" flexItem />
-            <BalanceCard name="ZAR" number="R21.00" type="Equivalent" />
-          </Paper>
-        </div>
+        <Paper className={classes.paper}>
+          <p>
+            <BalanceCard
+              className={classes.nuu}
+              name="AFYA"
+              number="143.00"
+              type="Balance"
+              nom="ZAR"
+              num="R21.00"
+              typ="Equivalent"
+            />
+            {/*  */}
+            {/* <BalanceCard className={classes.nuu} name="ZAR" number="R21.00" type="Equivalent" /> */}
+          </p>{" "}
+        </Paper>
+      </div>
     </div>
   );
 }
