@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-import NavBar from "./Components/NavBar";
-import BalanceCard from "./Components/BalanceCard";
-import BalanceSelect from "./Components/BalanceSelect";
-import BLists from "./Components/BLists";
-import BottomNav from "./Components/BottomNav";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import "./App.css";
+import Home from "./Pages/Home";
+import Activity from "./Pages/Activity";
+import Wallet from "./Pages/Wallet";
+import Market from "./Pages/Market";
+import Earn from "./Pages/Earn";
+
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <BalanceCard />
-      <BalanceCard />
-      <h1>
-        Select Currency:
-      </h1>
-      <BalanceSelect />
-      <BLists />
-      <BottomNav />
-    </div>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/activity" component={Activity} />
+          <Route exact path="/wallet" component={Wallet} />
+          <Route exact path="/market" component={Market} />
+          <Route exact path="/earn" component={Earn} />
+        </Switch>
+      </Router>
   );
 }
 

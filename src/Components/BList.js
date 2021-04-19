@@ -26,9 +26,15 @@ const useStyles = makeStyles((theme) => ({
   title: {
     margin: theme.spacing(4, 0, 2),
   },
+  img: {
+    height: "30px",
+  },
+  bgc: {
+    backgroundColor: "white",
+  }
 }));
 
-function BList() {
+function BList(prop) {
   const classes = useStyles();
 
   return (
@@ -40,15 +46,15 @@ function BList() {
             <List>
                 <ListItem>
                   <ListItemAvatar>
-                    <Avatar>
-                      <FolderIcon />
+                    <Avatar className={classes.bgc}>
+                      <img className={classes.img} src={prop.img} alt=""/>
                     </Avatar>
                   </ListItemAvatar>
                   <ListItemText
-                    primary="Single-line item"
+                    primary={prop.text}
                   />
                   <ListItemSecondaryAction>
-                    <p>A100</p>
+                    {prop.price}
                   </ListItemSecondaryAction>
                 </ListItem>,
             </List>
