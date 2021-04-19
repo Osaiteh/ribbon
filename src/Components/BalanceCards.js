@@ -13,11 +13,12 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     textAlign: "center",
     color: theme.palette.text.secondary,
+    display: "flex",
+    flexDirection: "column",
   },
   wid: {
     display: "flex",
-    alignContent: "center",
-    justifyContent: "center",
+    flexDirection: "column"
   },
   nuu: {
     textAlign: "center",
@@ -35,9 +36,7 @@ function BalanceCards() {
 
           <Paper className={classes.paper}>
             <BalanceCard className={classes.nuu} name="AFYA" number="143.00" type="Balance" />
-          </Paper>
         <Divider orientation="vertical" flexItem />
-          <Paper className={classes.paper}>
             <BalanceCard name="ZAR" number="R21.00" type="Equivalent" />
           </Paper>
         </div>

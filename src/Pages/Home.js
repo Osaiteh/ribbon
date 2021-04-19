@@ -4,6 +4,7 @@ import BalanceSelect from "../Components/BalanceSelect";
 import BLists from "../Components/BLists";
 import BottomNav from "../Components/BottomNav";
 import "../Components/BottomNav.css"
+import GreyArea from "../Components/GreyArea"
 
 function Home() {
   
@@ -11,12 +12,12 @@ function Home() {
     <div>
       <RAppBar title="ribbon" />
       <BalanceCards />
-      <h1>Select Currency:</h1>
+      <GreyArea text="Select Currency:" />
       <BalanceSelect />
+      <GreyArea text="Recent Activity" />
       <BLists />
-      <BottomNav
-        home = "true"
-      />
+      <GreyArea />
+      <BottomNav home="true" />
     </div>
   );
 }
